@@ -66,10 +66,12 @@ app.get("/Homepage/doctors/appointment/:id",function(req,res){
     //res.sendFile(__dirname+"/HTML/appointment.html");
     res.render('appointment',{doctor_id:doctor_id})
 });
-app.post("/Homepage/doctors/appointment",async function(req,res){
+app.post("/Homepage/doctors/appointment/:id",async function(req,res){
     //req.params.id
     let appointment = new Appointments({
-        dr_id:req.body.custId,
+        //dr_id:req.body.custId,
+        dr_id:req.params.id,
+
         name:req.body.name,
         date:req.body.date,
         option:req.body.option,

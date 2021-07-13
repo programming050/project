@@ -69,7 +69,7 @@
                     <img src="/img/appointment-image.jpg" alt="doxtor" />
                 </div>
                 <div class="wow animate__animated animate__fadeIn animate__slower col-md-6" data-wow-delay ="0.5s" >
-                    <form action="/Homepage/doctors/appointment" class="appoint-form" method="POST" role="form">
+                    <form action="/Homepage/doctors/appointment/<%=doctor_id %>" class="appoint-form" method="POST" role="form">
                         <div class="form-title">
                             <h2 class="text-center">make an appointment</h2>
                         </div>
@@ -107,7 +107,7 @@
                                     placeholder="Message"></textarea>
                                 <button type="submit" class="btn btn-primary btn-lg">submit</button>
                             </div>
-                            <input type="hidden" id="custId" name="custId" value="<%=doctor_id %>">
+                            <!-- <input type="hidden" id="custId" name="custId" value="<%=doctor_id %>"> -->
 
                         </div>
                     </form>
